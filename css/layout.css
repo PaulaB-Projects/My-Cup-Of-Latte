@@ -1,5 +1,5 @@
 :root {
-	--padding:20px;
+	--padding:30px; /* clamp? */
 }
 
 * {
@@ -14,6 +14,11 @@
 body {
 	margin:0;
 	padding:0;
+	height:200vh;
+}
+
+.wrapper {
+	margin: 0 5%;
 }
 
 header {
@@ -44,30 +49,39 @@ header {
 .menu {
 	position: fixed;
 	top:var(--padding);
-	right: var(--padding);
+	right: calc(var(--padding) + 5%); /* calc() */
 	width: 30px;
 	aspect-ratio: 1;
 	border-radius: 50%;
 	z-index: 50;
 }
 
-.intro {
+header > section {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
 
 	position: relative;
-	z-index: 2;
 	flex-grow: 1;
-	width: 40%;
+}
+
+.intro {
+	position: relative;
+	width: clamp(250px, 40%, 500px);
+	z-index: 2;
 }
 
 .main-img {
+	--diameter: clamp(250px, 40vw, 500px);
 	position: absolute;
+	
+	top: calc(50% - var(--diameter) / 2);
+	right: 0; /* <-- !! */
+
 	z-index: 1;
-	background-color: aquamarine;
-	width: 60%;
+	width: var(--diameter);
 	aspect-ratio: 1;
+	
 	border-radius: 50%;
 }
