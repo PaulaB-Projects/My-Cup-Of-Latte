@@ -1,0 +1,73 @@
+:root {
+	--padding:20px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin:0;
+	padding:0;
+}
+
+header {
+	padding: var(--padding);
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.heading {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	position: relative;
+	z-index: 2;
+}
+
+.heading h1 {
+	margin: 0;
+}
+
+.logo {
+	width: 40px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+}
+
+.menu {
+	position: fixed;
+	top:var(--padding);
+	right: var(--padding);
+	width: 30px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	z-index: 50;
+}
+
+.intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+
+	position: relative;
+	z-index: 2;
+	flex-grow: 1;
+	width: 40%;
+}
+
+.main-img {
+	position: absolute;
+	z-index: 1;
+	background-color: aquamarine;
+	width: 60%;
+	aspect-ratio: 1;
+	border-radius: 50%;
+}
