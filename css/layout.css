@@ -1,5 +1,6 @@
 :root {
 	--padding:30px; /* clamp? */
+	--diameter: clamp(250px, 40vw, 500px);
 }
 
 * {
@@ -16,7 +17,7 @@ body {
 	padding:0;
 	height:200vh;
 }
-
+   
 .wrapper {
 	margin: 0 5%;
 }
@@ -26,18 +27,25 @@ header {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
+
 }
 
 .heading {
 	display: flex;
 	align-items: center;
-	gap: 10px;
-	position: relative;
+	justify-content: space-between;
+
 	z-index: 2;
+
 }
 
+.heading > div {
+	display: flex;
+	gap: 7px;
+}
 .heading h1 {
 	margin: 0;
+	padding: auto 0;
 }
 
 .logo {
@@ -47,13 +55,19 @@ header {
 }
 
 .menu {
-	position: fixed;
-	top:var(--padding);
-	right: calc(var(--padding) + 5%); /* calc() */
+	/* solution 2 - bringhing the menu back into the dom flow */
+	margin: 0;
 	width: 30px;
 	aspect-ratio: 1;
 	border-radius: 50%;
+	top: 15px;
+	right: 10px;
 	z-index: 50;
+	/* solution 1  - position fixed*/
+	/* top:calc(var(--padding) + (40px - 30px)/ 2 ); /* the heading container takes the height of the logo and therefor if we want to know the extact midle we have to find how much is 1/2 of the diference between the logo and the menu
+	right: calc(var(--padding) + 5%);  */ 
+
+
 }
 
 header > section {
@@ -73,7 +87,7 @@ header > section {
 }
 
 .main-img {
-	--diameter: clamp(250px, 40vw, 500px);
+	
 	position: absolute;
 	
 	top: calc(50% - var(--diameter) / 2);
