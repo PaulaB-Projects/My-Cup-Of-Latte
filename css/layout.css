@@ -1,5 +1,7 @@
 :root {
 	--padding:30px; /* clamp? */
+	--margin:calc(1.5 * var(--padding));
+	--section-margin:calc(2 * var(--margin));
 	--diameter: clamp(250px, 40vw, 500px);
 	--logo-size: 40px;
 	--menu-size: 30px;
@@ -21,19 +23,60 @@ html {
 body {
 	margin:0;
 	padding:0;
-	height:1000vh;
 }
-   
+
+img {
+	width:100%;
+}
+
+p, ul, ol, blockquote {
+	line-height:1.75;
+	margin:var(--margin) 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin:0 0 var(--margin);
+}
+
+h1 {
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+h5,
+h6 {
+	font-size: 14px;
+}
+
+section {
+	margin:var(--section-margin) 0;
+}
+
 .wrapper {
+	padding: var(--padding);
 	margin: 0 5%;
 }
 
-header {
-	padding: var(--padding);
+body > header {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
-
 }
 
 .heading {
@@ -101,7 +144,7 @@ header > section {
 	z-index: 2;
 }
 
-.main-img {
+.header-img {
 	
 	position: absolute;
 	
@@ -113,4 +156,22 @@ header > section {
 	aspect-ratio: 1;
 	
 	border-radius: 50%;
+}
+
+article > header {
+	padding: var(--padding) 0;
+}
+
+article > header h1,
+article > header h2 {
+	margin: 0;
+}
+
+.work-experience h4,
+.work-experience h5,
+.work-experience h6,
+.education h4,
+.education h5,
+.education h6 {
+	margin:0;
 }

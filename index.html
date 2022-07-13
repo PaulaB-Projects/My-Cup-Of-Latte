@@ -22,6 +22,19 @@
 		type="text/css"
 		href="/css/theme.css" />
 	<!---->
+	
+	<!-- FONTS -->
+	<link
+		rel="preconnect"
+		href="https://fonts.googleapis.com" />
+	<link
+		rel="preconnect"
+		href="https://fonts.gstatic.com"
+		crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Imprima&family=Inter:wght@200;400;700&display=swap"
+		rel="stylesheet" />
+	<!---->
 
 	<!-- SCRIPTS -->
 	<script src="/js/index.js" type="module"></script>
@@ -31,7 +44,7 @@
 	<header>
 		<div class="heading wrapper">
 			<div class="logo"></div>
-			<h1>Paula Burghelea</h1>	
+			<h1>Paula Burghelea</h1>
 		</div>
 
 		<div class="menu"></div>
@@ -42,65 +55,159 @@
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem laboriosam nobis enim eius consequuntur dolores dignissimos sapiente vel, illo sit voluptas modi repellendus quod quis placeat architecto recusandae nostrum pariatur?</p>
 				<button id="cvButton">View CV/Resume</button>
 			</div>
-			<div class="main-img"></div>
+			<div class="header-img"></div>
 		</section>
 	</header>
-	<main>
+	<main id="main">
 		<article class="wrapper">
-			<header class="name wrapper">Paula Burghelea</header>		
-			<section>
+			<header class="name">
+				<hgroup>
+					<h1>Paula Burghelea</h1>
+					<h2>CV/Resume</h2> <!-- Do we actually want to display this? -->
+					<!--
+						article header h2 {
+							display:none;
+						}
+					-->
+				</hgroup>
+			</header>
+			<section class="profile">
 				<h3>Profile</h3>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+					Repellendus ratione placeat pariatur quasi totam. Animi
+					blanditiis temporibus aliquid obcaecati quibusdam doloremque.
+					Iusto hic sunt, vitae aspernatur saepe delectus maiores! Odit?
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				</p>
 			</section>
-			<section>
-				<h3>Work Eperience</h3>
-					<h5>Twilio Inc. - Full time - London, England, UK</h5>
-						<h6>TECHNICAL ACCOUNT MANAGER</h6>
-						<h6>CUSTOMER SUCCESS MANAGER II</h6>
-					<h5>SendGrid Inc. - Full time - London, England, UK</h5>
-						<h6>CUSTOMER SUCCESS MANAGER</h6>
-					<h5>Intelligent Bee Web - Full time - Iasi, Romania</h5>
-						<h6>TEAM MANAGER</h6>
-						<h6>SENIOR TECHNICAL SUPPORT ENGINEER</h6>
-						<h6>JUNIOR TECHNICAL SUPPORT ENGINEER</h6>
+			<section class="work-experience">
+				<h3>Work Experience</h3>
+
+				<!--
+					(monospaced font)
+					JAN
+					FEB
+					MAR
+					APR
+					MAY
+					JUN
+					JUL
+					AUG
+					SEP
+					OCT
+					NOV
+					DEC
+				-->
+				<ol class="jobs">
+					<li>
+						<hgroup>
+							<h4>Twilio Inc. - Full time - London, England, UK</h4>
+							<h5 class="time-interval">
+								<time datetime="2012-04">Apr 2012</time> - <time datetime="2012-11">Nov 2012</time>
+							</h5>
+						</hgroup>
+						<ul class="roles">
+							<li>
+								Technical Account Manager
+							</li>
+							<li>
+								Customer Success Manager II
+							</li>
+						</ul>
+					</li>
+					<li>
+						<article class="job">
+							<header>
+								<h1>SendGrid Inc. - Full time - London, England, UK</h1>
+								<h2>
+									<time datetime="2011-03">03-2011</time> - <time datetime="2012-05">05-2012</time>
+								</h2>
+							</header>
+							<ul class="roles">
+								<li>
+									Customer Success Manager
+								</li>
+							</ul>
+						</article>
+					</li>
+					<li>
+						<!--
+							<h5>Intelligent Bee Web - Full time - Iasi, Romania</h5>
+							<h6>TEAM MANAGER</h6>
+							<h6>SENIOR TECHNICAL SUPPORT ENGINEER</h6>
+							<h6>JUNIOR TECHNICAL SUPPORT ENGINEER</h6>
+						-->
+					</li>
+				</ol>
 			</section>
-		</article>
-		<article class="wrapper">
-			<section>
+			<section class="skills">
 				<h3>Skills</h3>
-				<p>HTML , XML</p>
-				<p>CSS</p>
-				<p>JavaScript</p>
-				<p>React</p>
-				<p>Technical Support</p>
-				<p>Web API</p>
-				<p>Email : SMTP, DNS, Deliverability, Spam Filtering</p>
-				<p>SMPP, Voice,</p>
+				<ul>
+					<li>HTML &amp; XML</li>
+					<li>CSS</li>
+					<li>JavaScript</li>
+					<li>React</li>
+					<li>Technical Support</li>
+					<li>Web API</li>
+					<li>Email: SMTP, DNS, Deliverability &amp; Spam Filtering</li>
+					<li>SMPP &amp; Voice</li>
+				</ul>
 			</section>
-			<section>
+			<section class="languages">
 				<h3>Languages</h3>
-				<h6>Romanian</h6>
-				<h6>English</h6>
-				<h6>Italian</h6>
+				<ul>
+					<li>Romanian</li>
+					<li>English</li>
+					<li>Italian</li>
+				</ul>
 			</section>
-			<section>
+			<section class="education">
 				<h3>Education</h3>
-				<h6>2022</h6>
-					<p>FULL-STACK DEVELOPER BOOTCAMP
-						The Jump Digital School - Remote, UK
-					</p>
-				<h6>2015</h6>
-					<p>SITUATIONAL LEADERSHIP: Building Leaders
-						Edurom - Iasi, Romania
-					</p>
-				<h6>2009</h6>
-					<p>
-						ECONOMICS AND BUSINESS ADMINISTRATION
-						Al. I. Cuza Universiti - Iasi, Romania
-					</p>
+				
+				<ol>
+					<li>
+						<hgroup>
+							<h4>Full-Stack Developer Bootcamp</h4>
+							<h5>The Jump Digital School - Remote, UK</h5>
+							<h6>
+								<time datetime="2022">2022</time>
+							</h6>
+						</hgroup>
+						<p>
+							Things that you did...
+						</p>
+					</li>
+					<li>
+						<hgroup>
+							<h4>
+								Situalion Leadership: Building Leaders
+							</h4>
+							<h5>
+								Edurom - Iasi, Romania
+							</h5>
+							<h6>
+								<time datetime="2015">2015</time>
+							</h6>
+						</hgroup>
+					</li>
+					<li>
+						<hgroup>
+							<h4>
+								Economics and Business Administration
+							</h4>
+							<h5>Al. I. Cuza Universiti - Iasi, Romania
+							</h5>
+							<h6>
+								<time datetime="2009">2009</time>
+							</h6>
+						</hgroup>
+					</li>
+				</ol>
 			</section>
 		</article>
-
-
 	</main>
 	<footer>
 
