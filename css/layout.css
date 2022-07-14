@@ -175,3 +175,13 @@ article > header h2 {
 .education h6 {
 	margin:0;
 }
+
+figure {
+	overflow: hidden;
+}
+
+figure img {
+	width: 400px;
+	height: 400px;
+	object-fit: cover;
+}
