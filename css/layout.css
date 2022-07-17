@@ -190,3 +190,48 @@ figure img {
 	width: auto;
 	height: 400px;
 }
+
+.work-experience > ol,
+.education > ol {
+	list-style: none;
+	padding-left: 0;
+}
+
+.work-experience .jobs hgroup {
+	display: flex;
+	justify-content: space-between; 
+	align-items: center;
+	gap: var(--padding);
+}
+
+.name hgroup h2 {
+	display: none;
+}
+
+.education .schools hgroup {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 0 var(--padding);
+}
+
+.schools li {
+	margin: var(--margin) 0;
+}
+
+.education .schools hgroup h4 {
+	order:1;
+	min-width: 290px;
+}
+
+.education .schools hgroup h6 {
+	order:2;
+}
+
+.education .schools hgroup h5 {
+	order:3;
+	width: 100%;
+
+}
+

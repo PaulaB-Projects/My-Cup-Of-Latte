@@ -28,6 +28,10 @@ h6 {
 	color: var(--heading-color);
 }
 
+.name hgroup h1 {
+	font-size: 5rem;
+}
+
 .logo {
 	background-color: grey;
 }
