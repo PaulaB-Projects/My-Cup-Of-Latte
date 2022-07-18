@@ -1,16 +1,41 @@
+:root {
+	--col-bg-color: #62577F;
+	--col-offset: calc(5vw + var(--padding) + var(--menu-size) + 10px);
+}
+
 body {
 	/* background:hotpink !important; */
 }
 
-.name {
+article {
 	display: flex;
+	flex-wrap: wrap;
+	gap: var(--margin);
 }
 
-.name figure {
-	order:2;
-	width: 30%;
-	margin: var(--margin);
+.name {
+	display: flex;
+	width: 100%;
+	flex-shrink: 0; /* ?? */
 }
+
+.right,
+.name .photo {
+	order:2;
+	
+	width: calc(var(--col-offset) + 40%);
+	padding: var(--margin);
+	padding-right: var(--col-offset);
+	margin-right: calc(-1 * var(--col-offset));
+
+	background-color: var(--col-bg-color);
+}
+
+.name .photo figure {
+	margin: 0;
+	width: 100%;
+}
+
 .name figure img {
 	height: auto;
 	width: 150%;
@@ -21,6 +46,16 @@ body {
 	flex-grow: 1;
 	display: flex;
 	align-items: center;
+}
+
+.left {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: calc(60% - var(--margin));
+}
+
+.right {
+	/*  */
 }
 
 

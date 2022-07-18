@@ -71,8 +71,8 @@ section {
 }
 
 .wrapper {
-	padding: var(--padding);
-	margin: 0 5%;
+	padding: var(--padding) calc(var(--padding) + var(--menu-size) + 10px) var(--padding) var(--padding);
+	margin: 0 5vw;
 }
 
 body > header {
@@ -148,20 +148,22 @@ header > section {
 
 .header-img {
 	
+	/* margin-right: 10%; */
+
 	position: absolute;
-	
+		
 	top: calc(50% - var(--diameter) / 2);
-	right: 0; /* <-- !! */
+	right: calc(5% + 10px + var(--menu-size)); /* <-- !! */
 
 	z-index: 1;
 	width: var(--diameter);
 	aspect-ratio: 1;
 	
-	border-radius: 50%;
+	border-radius: 0%;
 }
 
 article > header {
-	padding: var(--padding) 0;
+	padding: 0;
 }
 
 article > header h1,
@@ -176,6 +178,10 @@ article > header h2 {
 .education h5,
 .education h6 {
 	margin:0;
+}
+
+main article.wrapper{
+	padding-top: 0;
 }
 
 figure {

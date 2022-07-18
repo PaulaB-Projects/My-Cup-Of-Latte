@@ -68,13 +68,16 @@
 	<main id="main">
 		<article class="wrapper">
 			<header class="name">
-				<figure>
-					<img
-						src="/assets/img/IMG_20180808_111327.jpg"
-						alt="profile picture" />
-				</figure>
+				<div class="photo">
+					<figure>
+						<img
+							src="/assets/img/IMG_20180808_111327.jpg"
+							alt="profile picture" />
+					</figure>
+				</div>
+
 				<hgroup>
-					<h1>Paula Burghelea</h1>
+					<h1>Paula<br />Burghelea</h1>
 					<h2>CV/Resume</h2> <!-- Do we actually want to display this? -->
 					<!--
 						article header h2 {
@@ -83,145 +86,149 @@
 					-->
 				</hgroup>
 			</header>
-			<section class="profile">
-				<h3>Profile</h3>
-				<p>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-					Repellendus ratione placeat pariatur quasi totam. Animi
-					blanditiis temporibus aliquid obcaecati quibusdam doloremque.
-					Iusto hic sunt, vitae aspernatur saepe delectus maiores! Odit?
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				</p>
-			</section>
-			<section class="work-experience">
-				<h3>Work Experience</h3>
-
-				<!--
-					(monospaced font)
-					JAN
-					FEB
-					MAR
-					APR
-					MAY
-					JUN
-					JUL
-					AUG
-					SEP
-					OCT
-					NOV
-					DEC
-				-->
-				<ol class="jobs">
-					<li>
-						<hgroup>
-							<h4>Twilio Inc. - Full time - London, England, UK</h4>
-							<h5 class="time-interval">
-								<time datetime="2012-04">Apr 2012</time> - <time datetime="2012-11">Nov 2012</time>
-							</h5>
-						</hgroup>
-						<ol class="roles">
-							<li>
-								Technical Account Manager
-							</li>
-							<li>
-								Customer Success Manager II
-							</li>
-						</ol>
-					</li>
-					<li>
-						<hgroup>
-							<h4>SendGrid Inc. - Full time - London, England, UK</h4>
-							<h5 class="time-interval">
-								<time datetime="2012-04">Apr 2012</time> - <time datetime="2012-11">Nov 2012</time>
-							</h5>
-						</hgroup>
-						<ul class="roles">
-							<li>
-								Customer Success Manager
-							</li>
-						</ul>						
-					</li>
-					<li>
-						<hgroup>
-							<h4>Intelligent Bee Web - Full time - Iasi, Romania</h4>
-							<h5 class="time-interval">
-								<time datetime="2012-04">Apr 2012</time> - <time datetime="2012-11">Nov 2012</time>
-							</h5>
-						</hgroup>
-						<ul class="roles">
-							<li>Team Manager</li>
-							<li>Senior Technical Support Engineer</li>
-							<li>Senior Technical Support Engineer</li>
-						</ul>
-					</li>
-				</ol>
-			</section>
-			<section class="skills">
-				<h3>Skills</h3>
-				<ul>
-					<li>HTML &amp; XML</li>
-					<li>CSS</li>
-					<li>JavaScript</li>
-					<li>React</li>
-					<li>Technical Support</li>
-					<li>Web API</li>
-					<li>Email: SMTP, DNS, Deliverability &amp; Spam Filtering</li>
-					<li>SMPP &amp; Voice</li>
-				</ul>
-			</section>
-			<section class="languages">
-				<h3>Languages</h3>
-				<ul>
-					<li>Romanian</li>
-					<li>English</li>
-					<li>Italian</li>
-				</ul>
-			</section>
-			<section class="education">
-				<h3>Education</h3>
-				
-				<ol class="schools">
-					<li>
-						<hgroup>
-							<h4>Full-Stack Developer Bootcamp</h4>
-							<h5>The Jump Digital School - Remote, UK</h5>
-							<h6>
-								<time datetime="2022">2022</time>
-							</h6>
-						</hgroup>
-						<p>
-							Things that you did...
-						</p>
-					</li>
-					<li>
-						<hgroup>
-							<h4>
-								Situalion Leadership: Building Leaders
-							</h4>
-							<h5>
-								Edurom - Iasi, Romania
-							</h5>
-							<h6>
-								<time datetime="2015">2015</time>
-							</h6>
-						</hgroup>
-					</li>
-					<li>
-						<hgroup>
-							<h4>
-								Economics and Business Administration
-							</h4>
-							<h5>Al. I. Cuza Universiti - Iasi, Romania
-							</h5>
-							<h6>
-								<time datetime="2009">2009</time>
-							</h6>
-						</hgroup>
-					</li>
-				</ol>
-			</section>
+			<div class="left">
+				<section class="profile">
+					<h3>Profile</h3>
+					<p>
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						Repellendus ratione placeat pariatur quasi totam. Animi
+						blanditiis temporibus aliquid obcaecati quibusdam doloremque.
+						Iusto hic sunt, vitae aspernatur saepe delectus maiores! Odit?
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					</p>
+				</section>
+				<section class="work-experience">
+					<h3>Work Experience</h3>
+	
+					<!--
+						(monospaced font)
+						JAN
+						FEB
+						MAR
+						APR
+						MAY
+						JUN
+						JUL
+						AUG
+						SEP
+						OCT
+						NOV
+						DEC
+					-->
+					<ol class="jobs">
+						<li>
+							<hgroup>
+								<h4>Twilio Inc. - Full time - London, England, UK</h4>
+								<h5 class="time-interval">
+									<time datetime="2012-04">Apr 2012</time> - <time datetime="2012-11">Nov 2012</time>
+								</h5>
+							</hgroup>
+							<ol class="roles">
+								<li>
+									Technical Account Manager
+								</li>
+								<li>
+									Customer Success Manager II
+								</li>
+							</ol>
+						</li>
+						<li>
+							<hgroup>
+								<h4>SendGrid Inc. - Full time - London, England, UK</h4>
+								<h5 class="time-interval">
+									<time datetime="2012-04">Apr 2012</time> - <time datetime="2012-11">Nov 2012</time>
+								</h5>
+							</hgroup>
+							<ul class="roles">
+								<li>
+									Customer Success Manager
+								</li>
+							</ul>						
+						</li>
+						<li>
+							<hgroup>
+								<h4>Intelligent Bee Web - Full time - Iasi, Romania</h4>
+								<h5 class="time-interval">
+									<time datetime="2012-04">Apr 2012</time> - <time datetime="2012-11">Nov 2012</time>
+								</h5>
+							</hgroup>
+							<ul class="roles">
+								<li>Team Manager</li>
+								<li>Senior Technical Support Engineer</li>
+								<li>Senior Technical Support Engineer</li>
+							</ul>
+						</li>
+					</ol>
+				</section>
+			</div>
+			<div class="right">
+				<section class="skills">
+					<h3>Skills</h3>
+					<ul>
+						<li>HTML &amp; XML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+						<li>React</li>
+						<li>Technical Support</li>
+						<li>Web API</li>
+						<li>Email: SMTP, DNS, Deliverability &amp; Spam Filtering</li>
+						<li>SMPP &amp; Voice</li>
+					</ul>
+				</section>
+				<section class="languages">
+					<h3>Languages</h3>
+					<ul>
+						<li>Romanian</li>
+						<li>English</li>
+						<li>Italian</li>
+					</ul>
+				</section>
+				<section class="education">
+					<h3>Education</h3>
+					
+					<ol class="schools">
+						<li>
+							<hgroup>
+								<h4>Full-Stack Developer Bootcamp</h4>
+								<h5>The Jump Digital School - Remote, UK</h5>
+								<h6>
+									<time datetime="2022">2022</time>
+								</h6>
+							</hgroup>
+							<p>
+								Things that you did...
+							</p>
+						</li>
+						<li>
+							<hgroup>
+								<h4>
+									Situalion Leadership: Building Leaders
+								</h4>
+								<h5>
+									Edurom - Iasi, Romania
+								</h5>
+								<h6>
+									<time datetime="2015">2015</time>
+								</h6>
+							</hgroup>
+						</li>
+						<li>
+							<hgroup>
+								<h4>
+									Economics and Business Administration
+								</h4>
+								<h5>Al. I. Cuza Universiti - Iasi, Romania
+								</h5>
+								<h6>
+									<time datetime="2009">2009</time>
+								</h6>
+							</hgroup>
+						</li>
+					</ol>
+				</section>
+			</div>
 		</article>
 	</main>
 	<footer>
