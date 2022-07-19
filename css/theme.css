@@ -68,6 +68,7 @@ article > header h1 {
 
 
 .right :is(.skills, .languages) {
+	background-color: var(--col-bg-color);
 	color: var(--bg-color);
 }
 
@@ -78,6 +79,10 @@ article > header h1 {
 
 .education :is(h3, h4, h5, h6) {
 	color: var(--col-bg-color);
+}
+
+.right .education {
+	background-color: var(--right-section);
 }
 
 section h3::after {

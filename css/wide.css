@@ -7,7 +7,7 @@ header,
 article {
 	display: flex;
 	flex-wrap: wrap;
-	column-gap: var(--gap);
+	/* column-gap: var(--gap); */
 	padding-right: calc(-1 * var(--col-offset) + 5vw);
 
 }
@@ -22,10 +22,7 @@ article {
 .right,
 .name .photo {
 	order:2;
-	
-	width: calc(var(--col-offset) + 40%);
-	margin-right: calc(-1 * var(--col-offset));
-
+	width: 40%;
 	background-color: var(--col-bg-color);
 }
 
@@ -63,11 +60,9 @@ article {
 	flex-basis: calc(60% - var(--margin));
 }
 
-.right .education {
-	background-color: var(--right-section);
+.left section {
+	padding-right: var(--padding);
 }
-
-
 .skills ul {
 	margin-bottom: 0;
 }

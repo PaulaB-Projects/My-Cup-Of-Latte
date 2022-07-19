@@ -154,11 +154,6 @@ header > section {
 }
 
 .header-img {
-	/* margin-right: 10%; */
-	/* position: absolute; */		
-	top: calc(50% - var(--diameter) / 2);
-	right: calc(5% + 10px + var(--menu-size)); /* <-- !! */
-
 	z-index: 1;
 	width: var(--diameter);
 	aspect-ratio: 1;
