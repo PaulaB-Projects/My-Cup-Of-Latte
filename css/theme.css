@@ -3,6 +3,9 @@
 	--header-bg-color:#aaa;
 	--text-color:#4a4a4a;
 	--heading-color:#222;
+	--right-section:#3CD75A;
+	--col-bg-color: #62577F;
+	--bg-profile:#D7C1FF;
 
 	--heading-text:"Imprima", sans-serif;
 	--body-text:"Inter", sans-serif;
@@ -15,7 +18,7 @@ body {
 }
 
 body > header {
-	background-color: var(--header-bg-color);
+	background-color: var(--col-bg-color);
 }
 
 h1,
@@ -28,8 +31,10 @@ h6 {
 	color: var(--heading-color);
 }
 
-.name hgroup h1 {
+.name hgroup h1,
+.intro h2 {
 	font-size: 5rem;
+	color: var(--bg-color);
 }
 
 .logo {
@@ -37,9 +42,47 @@ h6 {
 }
 
 .menu {
-	background-color: aquamarine;
+	background-color: var(--right-section);
 }
 
 .header-img { 
-	background-color: purple;
+	background-color: rgb(13, 99, 65);
+}
+
+article > header {
+	background-color: var(--col-bg-color);
+}
+
+article > header h1 {
+	color: var(--bg-color);
+}
+
+.profile {
+	background-color: var(--bg-profile);
+}
+
+.profile,
+.profile h3 {
+	color: var(--col-bg-color);
+}
+
+
+.right :is(.skills, .languages) {
+	color: var(--bg-color);
+}
+
+.skills h3,
+.languages h3{
+	color: var(--right-section);
+}
+
+.education :is(h3, h4, h5, h6) {
+	color: var(--col-bg-color);
+}
+
+section h3::after {
+	content: "";
+	display: block;
+	width: 25px;
+	border-bottom: 2px solid;
 }

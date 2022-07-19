@@ -1,16 +1,15 @@
-:root {
-	--col-bg-color: #62577F;
-	--col-offset: calc(5vw + var(--padding) + var(--menu-size) + 10px);
-}
-
 body {
 	/* background:hotpink !important; */
 }
 
+
+header,
 article {
 	display: flex;
 	flex-wrap: wrap;
-	gap: var(--margin);
+	column-gap: var(--gap);
+	padding-right: calc(-1 * var(--col-offset) + 5vw);
+
 }
 
 .name {
@@ -19,16 +18,26 @@ article {
 	flex-shrink: 0; /* ?? */
 }
 
+
 .right,
 .name .photo {
 	order:2;
 	
 	width: calc(var(--col-offset) + 40%);
-	padding: var(--margin);
-	padding-right: var(--col-offset);
 	margin-right: calc(-1 * var(--col-offset));
 
 	background-color: var(--col-bg-color);
+}
+
+.right section,
+.name .photo {
+	padding: var(--margin);
+	padding-right: var(--col-offset);
+}
+
+.right section {
+	margin: 0;
+	padding-bottom: calc(var(--margin) / 2);
 }
 
 .name .photo figure {
@@ -54,8 +63,12 @@ article {
 	flex-basis: calc(60% - var(--margin));
 }
 
-.right {
-	/*  */
+.right .education {
+	background-color: var(--right-section);
 }
 
+
+.skills ul {
+	margin-bottom: 0;
+}
 

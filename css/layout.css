@@ -4,9 +4,13 @@
 	--margin:calc(1.5 * var(--padding));
 	--section-margin:calc(2 * var(--margin));
 
-	--diameter: clamp(250px, 40vw, 500px);
+	--col-offset: calc(5vw + var(--padding) + var(--menu-size) + 10px);
+
+	--diameter: clamp(230px, 40vw, 450px);
 	--logo-size: 40px;
 	--menu-size: 30px;
+
+	--gap: var(--padding);
 }
 
 html {
@@ -66,13 +70,18 @@ h6 {
 	font-size: 14px;
 }
 
-section {
+/* section {
 	margin:var(--section-margin) 0;
-}
+} */
 
-.wrapper {
-	padding: var(--padding) calc(var(--padding) + var(--menu-size) + 10px) var(--padding) var(--padding);
-	margin: 0 5vw;
+.wrapper,
+article section,
+article > header {
+	padding:
+		var(--padding)
+		var(--col-offset) /* <-- 5vw was added -- but why? */
+		var(--padding)
+		calc(5vw + var(--padding));
 }
 
 body > header {
@@ -132,11 +141,9 @@ body > header {
 
 header > section {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-
-	position: relative;
+	justify-content: space-between;
+	align-items: center;
+	/* position: relative; */
 	flex-grow: 1;
 }
 
@@ -147,28 +154,20 @@ header > section {
 }
 
 .header-img {
-	
 	/* margin-right: 10%; */
-
-	position: absolute;
-		
+	/* position: absolute; */		
 	top: calc(50% - var(--diameter) / 2);
 	right: calc(5% + 10px + var(--menu-size)); /* <-- !! */
 
 	z-index: 1;
 	width: var(--diameter);
 	aspect-ratio: 1;
-	
 	border-radius: 0%;
-}
-
-article > header {
-	padding: 0;
 }
 
 article > header h1,
 article > header h2 {
-	margin: 0;
+	margin: 0 0 var(--padding) 0;
 }
 
 .work-experience h4,
@@ -182,6 +181,7 @@ article > header h2 {
 
 main article.wrapper{
 	padding-top: 0;
+	padding-bottom: 0;
 }
 
 figure {
