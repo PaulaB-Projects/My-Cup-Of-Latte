@@ -147,6 +147,8 @@ header > section {
 	flex-grow: 1;
 }
 
+
+
 .intro {
 	position: relative;
 	width: clamp(250px, 40%, 500px);
@@ -160,24 +162,29 @@ header > section {
 	border-radius: 0%;
 }
 
-article > header h1,
-article > header h2 {
-	margin: 0 0 var(--padding) 0;
-}
-
-.work-experience h4,
-.work-experience h5,
-.work-experience h6,
-.education h4,
-.education h5,
-.education h6 {
-	margin:0;
+main article > header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	 
 }
 
 main article.wrapper{
 	padding-top: 0;
 	padding-bottom: 0;
 }
+
+
+
+.name hgroup h2 {
+	display: none;
+}
+
+article > header h1,
+article > header h2 {
+	margin: 0 0 var(--padding) 0;
+}
+
 
 figure {
 	width: 400px;
@@ -190,6 +197,15 @@ figure {
 figure img {
 	width: auto;
 	height: 400px;
+}
+
+.work-experience h4,
+.work-experience h5,
+.work-experience h6,
+.education h4,
+.education h5,
+.education h6 {
+	margin:0;
 }
 
 .work-experience > ol,
@@ -205,9 +221,7 @@ figure img {
 	gap: var(--padding);
 }
 
-.name hgroup h2 {
-	display: none;
-}
+
 
 .education .schools hgroup {
 	display: flex;

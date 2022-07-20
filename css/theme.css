@@ -31,10 +31,9 @@ h6 {
 	color: var(--heading-color);
 }
 
-.name hgroup h1,
-.intro h2 {
+.name hgroup h1 {
 	font-size: 5rem;
-	color: var(--bg-color);
+	color: var(--col-bg-color);
 }
 
 .logo {
@@ -50,11 +49,7 @@ h6 {
 }
 
 article > header {
-	background-color: var(--col-bg-color);
-}
-
-article > header h1 {
-	color: var(--bg-color);
+	background-color: var(--bg-color);
 }
 
 .profile {
@@ -68,7 +63,6 @@ article > header h1 {
 
 
 .right :is(.skills, .languages) {
-	background-color: var(--col-bg-color);
 	color: var(--bg-color);
 }
 
@@ -81,7 +75,11 @@ article > header h1 {
 	color: var(--col-bg-color);
 }
 
-.right .education {
+.languages,
+.skills {
+	background-color: var(--col-bg-color);
+}
+.education {
 	background-color: var(--right-section);
 }
 
