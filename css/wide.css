@@ -1,10 +1,6 @@
 body {
 	/* background:hotpink !important; */
 }
-article {
-	display: flex;
-	flex-wrap: wrap;
-}
 
 article > header {
 	/* display: flex;
@@ -13,13 +9,44 @@ article > header {
 	/* padding-right: calc(-1 * var(--col-offset) + 5vw); */
 	padding: 0;
 }
+article {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: flex-end;
+}
 
-.name {
+article .name {
+	order: 1;
 	display: flex;
 	width: 100%;
 	flex-shrink: 0; /* ?? */
 }
 
+article .profile {
+	order: 2;
+	width: 60%;
+}
+
+article .skills {
+	order: 3;
+	width: 40%;
+}
+
+article .work-experience {
+	order: 4;
+	width: 60%;
+}
+
+article .languages {
+	order: 5;
+	width: 40%;
+}
+
+article .education {
+	order: 6;
+	width: 40%;
+}
 
 article > header hgroup {
 	text-align: start;
@@ -62,11 +89,11 @@ article > header hgroup {
 	align-items: center;
 }
 
-.left {
+/* .left {
 	flex-grow: 1;
 	flex-shrink: 1;
 	flex-basis: calc(60% - var(--margin));
-}
+} */
 
 .left section {
 	padding-right: var(--padding);

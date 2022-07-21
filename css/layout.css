@@ -162,11 +162,42 @@ header > section {
 	border-radius: 0%;
 }
 
-main article > header {
+main article {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+article .name {
+	width: 100%;
+	order:1;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	 
+}
+
+article .profile {
+	width: 100%;
+	order: 2;
+}
+article .skills {
+	width: 100%;
+	order: 3;
+}
+
+article .languages {
+	width: 100%;
+	order: 4;
+}
+
+article .work-experience {
+	width: 100%;
+	order: 5;
+}
+
+article .education {
+	width: 100%;
+	order: 6;
 }
 
 main article.wrapper{
