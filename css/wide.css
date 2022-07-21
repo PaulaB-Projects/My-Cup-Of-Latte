@@ -9,11 +9,22 @@ article > header {
 	/* padding-right: calc(-1 * var(--col-offset) + 5vw); */
 	padding: 0;
 }
+
 article {
-	display: flex;
-	flex-wrap: wrap;
 	width: 100%;
 	justify-content: flex-end;
+	align-items: flex-start;
+}
+
+article .profile,
+article .work-experience {
+	padding-right: var(--padding);
+}
+
+article .skills,
+article .languages,
+article .education {
+	padding-left: var(--padding);
 }
 
 article .name {
@@ -89,11 +100,6 @@ article > header hgroup {
 	align-items: center;
 }
 
-/* .left {
-	flex-grow: 1;
-	flex-shrink: 1;
-	flex-basis: calc(60% - var(--margin));
-} */
 
 .left section {
 	padding-right: var(--padding);
@@ -102,3 +108,17 @@ article > header hgroup {
 	margin-bottom: 0;
 }
 
+.education .schools hgroup h4 {
+	order:2;
+	min-width: 290px;
+}
+
+.education .schools hgroup h6 {
+	order:1;
+	width: 100%;
+}
+
+.education .schools hgroup h5 {
+	order:3;
+	width: 100%;
+}

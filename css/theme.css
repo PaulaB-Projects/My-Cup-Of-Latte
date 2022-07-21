@@ -21,6 +21,10 @@ body > header {
 	background-color: var(--col-bg-color);
 }
 
+body > nav {
+	background-color: var(--bg-profile);
+}
+
 h1,
 h2,
 h3,
@@ -78,7 +82,10 @@ article > header {
 .languages,
 .skills {
 	background-color: var(--col-bg-color);
+	color: var(--bg-color);
 }
+
+
 .education {
 	background-color: var(--right-section);
 }
