@@ -122,3 +122,13 @@ article > header hgroup {
 	order:3;
 	width: 100%;
 }
+
+.nav-main {
+	display: flex;
+}
+
+.nav-main figure {
+	margin: 0;
+	width: 50%;
+	aspect-ratio: 1;
+}
