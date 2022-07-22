@@ -111,18 +111,22 @@ body > nav {
 }
 
 .nav-main {
+	height: 80%;
 	display: flex;
-   align-items: center;
-
 }
 
 .nav-main figure {
+	display: none;
 	margin: 0;
 	width: 50%;
 	aspect-ratio: 1;
 }
 
-.nav-main .menu-list {
+.menu-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
 	margin: 0;
 	padding-left: var(--padding);
 }

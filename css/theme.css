@@ -35,8 +35,7 @@ h6 {
 	color: var(--heading-color);
 }
 
-.name hgroup h1,
-.nav-main {
+.name hgroup h1 {
 	font-size: 5rem;
 	color: var(--col-bg-color);
 }
@@ -47,6 +46,10 @@ h6 {
 
 .menu {
 	background-color: var(--right-section);
+}
+.nav-main {
+	font-family: var(--heading-text);
+	font-size: 4rem;
 }
 
 .header-img { 
