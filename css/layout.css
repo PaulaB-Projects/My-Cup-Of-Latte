@@ -99,11 +99,36 @@ body > nav {
 
 	z-index: 100;
 
+	display: none;	
+}
+
+.menu-toggle {
 	display: none;
 }
 
 .menu-toggle:checked + nav {
 	display: block;
+}
+
+.nav-main {
+	display: flex;
+   align-items: center;
+
+}
+
+.nav-main figure {
+	margin: 0;
+	width: 50%;
+	aspect-ratio: 1;
+}
+
+.nav-main .menu-list {
+	margin: 0;
+	padding-left: var(--padding);
+}
+
+.menu-list a {
+	text-decoration: none;
 }
 
 .heading {
@@ -235,7 +260,7 @@ article > header h2 {
 }
 
 
-figure {
+.photo figure {
 	width: 400px;
 	aspect-ratio: 1;
 	border-radius: 50%;
@@ -243,7 +268,7 @@ figure {
 	margin: var(--margin) auto var(--section-margin);
 }
 
-figure img {
+.photo figure img {
 	width: auto;
 	height: 400px;
 }
@@ -258,7 +283,8 @@ figure img {
 }
 
 .work-experience > ol,
-.education > ol {
+.education > ol,
+.menu-list {
 	list-style: none;
 	padding-left: 0;
 }
