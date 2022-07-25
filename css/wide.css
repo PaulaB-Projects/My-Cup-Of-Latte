@@ -3,10 +3,6 @@ body {
 }
 
 article > header {
-	/* display: flex;
-	flex-wrap: wrap; */
-	/* column-gap: var(--gap); */
-	/* padding-right: calc(-1 * var(--col-offset) + 5vw); */
 	padding: 0;
 }
 
@@ -123,6 +119,27 @@ article > header hgroup {
 	width: 100%;
 }
 
-.nav-main { 
-	
+/* NAV Menu */
+
+.nav-main {
+	width: 100%;
+	/* height: 80%; */
+	align-items: center;
+
 }
+.nav-main figure {
+	display: block;
+	width: 50%;
+	margin: 0;
+	align-self: flex-end;
+}
+.nav-main figure > img {
+	max-width: 400px;
+}
+
+/* should go in the theme.css ? */
+.nav-main .menu-list { 
+	font-size: 5rem;
+}
+
+

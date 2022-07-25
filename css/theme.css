@@ -47,9 +47,24 @@ h6 {
 .menu {
 	background-color: var(--right-section);
 }
+
 .nav-main {
 	font-family: var(--heading-text);
 	font-size: 4rem;
+}
+
+.menu-list {
+	text-transform: uppercase;
+	line-height: 1.1;
+}
+
+#portofolio:hover ~ #about,
+#portofolio:hover ~ #contact {
+	background-color: aquamarine;
+}
+#about:hover ~ #portofolio,
+#about:hover ~ #contact {
+	background-color: #aaa;
 }
 
 .header-img { 
@@ -88,7 +103,6 @@ article > header {
 	background-color: var(--col-bg-color);
 	color: var(--bg-color);
 }
-
 
 .education {
 	background-color: var(--right-section);
