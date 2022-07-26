@@ -23,6 +23,15 @@ body > header {
 
 body > nav {
 	background-color: var(--bg-profile);
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1s, visibility 0s linear 1s;
+}
+
+.menu-toggle:checked + nav {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 1s;
 }
 
 h1,
@@ -58,13 +67,25 @@ h6 {
 	line-height: 1.1;
 }
 
-#portofolio:hover ~ #about,
-#portofolio:hover ~ #contact {
-	background-color: aquamarine;
+.menu-list:hover li a{
+	opacity: 0.5;
 }
-#about:hover ~ #portofolio,
-#about:hover ~ #contact {
-	background-color: #aaa;
+
+.menu-list li a:hover {
+	opacity: 1;
+}
+
+.menu-list li figure {
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+.menu-list li:hover figure {
+	opacity: 1;	
+}
+
+.menu-list li a {
+	transition: opacity 1s;
 }
 
 .header-img { 

@@ -91,13 +91,14 @@ body > header {
 }
 
 body > nav {
+	display: flex;
+	flex-direction: column;
 	position: fixed;
 	top:0;
 	left:0;
 	width:100%;
 	height:100%;
 	z-index: 100;
-	display: none;	
 }
 
 .menu-toggle {
@@ -105,17 +106,21 @@ body > nav {
 }
 
 .menu-toggle:checked + nav {
-	display: block;
+
 }
 
 .nav-main {
-	height: 80%;
+	position: relative;
+	flex-grow: 1;
 	display: flex;
-	gap: var(--padding);
+	align-items: center;
 }
 
 .nav-main figure {
+	position: absolute;
 	display: none;
+	bottom: 0;
+	left: var(--padding);
 }
 
 .menu-list {
