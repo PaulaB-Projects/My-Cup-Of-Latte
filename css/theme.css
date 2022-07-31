@@ -24,14 +24,18 @@ body > header {
 body > nav {
 	background-color: var(--bg-profile);
 	visibility: hidden;
-	opacity: 0;
-	transition: opacity 1s, visibility 0s linear 1s;
+	opacity: 1;
+	transition: 
+		/* opacity 1s, */
+		visibility 2s linear,
+		transform 2s linear;
 }
 
 .menu-toggle:checked + nav {
 	visibility: visible;
 	opacity: 1;
-	transition: opacity 1s;
+	/* transition: opacity 1s; */
+	transform: translateY(100%);
 }
 
 h1,
@@ -55,6 +59,12 @@ h6 {
 
 .menu {
 	background-color: var(--right-section);
+}
+.menu-text {
+	color: #3CD75A;
+	display: inline-block;
+	z-index: 50;
+	visibility: visible;
 }
 
 .nav-main {
