@@ -24,18 +24,33 @@ body > header {
 body > nav {
 	background-color: var(--bg-profile);
 	visibility: hidden;
-	opacity: 1;
+	opacity: 0;
+	transform: translateY(100vh);
 	transition: 
-		/* opacity 1s, */
-		visibility 2s linear,
-		transform 2s linear;
+		opacity 1s,
+		visibility 0s linear 1s,
+		transform 1s;
 }
 
 .menu-toggle:checked + nav {
 	visibility: visible;
 	opacity: 1;
-	/* transition: opacity 1s; */
-	transform: translateY(100%);
+	transform: translateY(0);
+	transition: 
+		opacity 1s,
+		transform 1s;
+}
+
+nav .heading { 
+	opacity: 0;
+	transition: 
+		opacity 1s ease 0s;
+}
+
+.menu-toggle:checked + nav .heading {
+	opacity: 1;
+	transition: 
+		opacity 1s ease 1s;
 }
 
 h1,
@@ -77,12 +92,30 @@ h6 {
 	line-height: 1.1;
 }
 
-.menu-list:hover li a{
+.menu-list li a {
+	display: block;
+	/* opacity:0; */
+	/* transform: translateY(100%); */
+	transition: opacity 1s;
+}
+
+.menu-toggle:checked + nav .menu-list li a {
+	/* opacity: 1; */
+	/* transform: translateY(0%); */
+}
+
+.openAnimation a {
+	color: #3CD75A;
+
+}
+
+.menu-list:hover li a {
 	opacity: 0.5;
 }
 
 .menu-list li a:hover {
 	opacity: 1;
+	
 }
 
 .menu-list li figure {
@@ -94,9 +127,6 @@ h6 {
 	opacity: 1;	
 }
 
-.menu-list li a {
-	transition: opacity 1s;
-}
 
 .header-img { 
 	background-color: rgb(13, 99, 65);

@@ -44,3 +44,22 @@ window.addEventListener('resize', () => {
 
 // what about when we haven't resized the window?
 educationPosition();
+
+// when menu toggle is clicked ...
+
+const checkbox = document.getElementById("menu-toggle");
+const menuList = document.querySelector(".menu-list");
+
+checkbox.addEventListener("input", () => {
+	console.log(checkbox.checked);
+	if (checkbox.checked) {
+		///add a class name to the menu list
+		menuList.classList.add("openAnimation");
+		setTimeout(
+			() => menuList.classList.remove("openAnimation"),
+			2000
+		);
+	} else {
+		console.log("menu has not been checked");
+	}		
+});
