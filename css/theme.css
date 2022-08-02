@@ -1,13 +1,30 @@
 :root {
 	--bg-color:#e1e1e1;
 	--header-bg-color:#aaa;
-	--text-color:#4a4a4a;
+	--text-color:#F9EBD7;
 	--heading-color:#222;
-	--right-section:#3CD75A;
-	--col-bg-color: #62577F;
-	--bg-profile:#D7C1FF;
+	--right-section:#C7A267;
+	--col-bg-color: #2D2D3C;
+	--cv-bg-color: #194542;
+	--cv-bg-light:#94B295;
+	--bg-profile:#D5BA7F;
 
-	--heading-text:"Imprima", sans-serif;
+/* from https://seasons-and-salt.com/  */
+	--main-bg-brown: #90482F;
+	--main-light01: #C7A267;
+	--main-light02:#FDFEF6;
+	--main-bg-red:#B43C20;
+
+	--neutral-navy:#153458;
+	--neutral-grey:#303436;
+	--neutral-blue:#9FCEFF;
+	--neurtal-cream:#9B8F83;
+
+	--accent-pink:#E4957D;
+	--accent-green:#64613E;
+	
+
+	--heading-text:"Yusei Magic", sans-serif;
 	--body-text:"Inter", sans-serif;
 }
 
@@ -75,8 +92,11 @@ h6 {
 .menu {
 	background-color: var(--right-section);
 }
+
+.menu-toggle:checked ~ .menu {
+	background-color: var(--cv-bg-color);
+}
 .menu-text {
-	color: #3CD75A;
 	display: inline-block;
 	z-index: 50;
 	visibility: visible;
@@ -90,13 +110,32 @@ h6 {
 .menu-list {
 	text-transform: uppercase;
 	line-height: 1.1;
+	
+}
+
+.menu-list li {
+	overflow: hidden;
 }
 
 .menu-list li a {
+	--delay: 0s;
+	--duration: 750ms;
+	--timing: cubic-bezier(0.475, 0.140, 0.660, 1.430);
+	color:var(--cv-bg-color);
 	display: block;
-	opacity:0;
-	transform: translateY(100%);
-	transition: opacity 1s;
+	opacity: 0;
+	transition: 
+		opacity var(--duration) ease calc(var(--delay) + 0.35s),
+		transform var(--duration) var(--timing) var(--delay);
+	transform: translateY(100%) rotate(7deg);
+}
+
+.menu-list li:nth-child(2) a {
+	--delay: 0.25s;
+}
+
+.menu-list li:nth-child(3) a {
+	--delay: 0.5s;
 }
 
 .menu-toggle:checked + nav .menu-list li a {
@@ -104,10 +143,9 @@ h6 {
 	/* transform: translateY(0%); */
 }
 
-.openAnimation a {
-	color: #3CD75A;
-	opacity:1;
-	transform: translateY(0%);
+.openMenu li a {
+	opacity: 1;
+	transform: translateY(0) rotate(0);
 }
 
 .menu-list:hover li a {
@@ -138,7 +176,7 @@ article > header {
 }
 
 .profile {
-	background-color: var(--bg-profile);
+	background-color: var(--cv-bg-light);
 }
 
 .profile,
@@ -162,12 +200,16 @@ article > header {
 
 .languages,
 .skills {
-	background-color: var(--col-bg-color);
+	background-color: var(--cv-bg-color);
 	color: var(--bg-color);
 }
 
 .education {
 	background-color: var(--right-section);
+}
+
+.roles {
+	color: var(--cv-bg-color);
 }
 
 section h3::after {

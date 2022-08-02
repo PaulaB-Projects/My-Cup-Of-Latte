@@ -54,12 +54,11 @@ checkbox.addEventListener("input", () => {
 	console.log(checkbox.checked);
 	if (checkbox.checked) {
 		///add a class name to the menu list
-		menuList.classList.add("openAnimation");
+		// menuList.classList.add("openAnimation");
 		setTimeout(
-			() => menuList.classList.remove("openAnimation"),
-			2000
+			() => menuList.classList.add("openMenu"),
+			1000
 		);
-	} else {
-		console.log("menu has not been checked");
-	}
+	} else
+		menuList.classList.remove("openMenu");
 });
