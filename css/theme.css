@@ -94,8 +94,8 @@ h6 {
 
 .menu-list li a {
 	display: block;
-	/* opacity:0; */
-	/* transform: translateY(100%); */
+	opacity:0;
+	transform: translateY(100%);
 	transition: opacity 1s;
 }
 
@@ -106,7 +106,8 @@ h6 {
 
 .openAnimation a {
 	color: #3CD75A;
-
+	opacity:1;
+	transform: translateY(0%);
 }
 
 .menu-list:hover li a {

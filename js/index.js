@@ -61,5 +61,5 @@ checkbox.addEventListener("input", () => {
 		);
 	} else {
 		console.log("menu has not been checked");
-	}		
+	}
 });
