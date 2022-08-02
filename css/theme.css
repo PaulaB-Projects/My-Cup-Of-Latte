@@ -96,6 +96,7 @@ h6 {
 .menu-toggle:checked ~ .menu {
 	background-color: var(--cv-bg-color);
 }
+
 .menu-text {
 	display: inline-block;
 	z-index: 50;
@@ -136,11 +137,6 @@ h6 {
 
 .menu-list li:nth-child(3) a {
 	--delay: 0.5s;
-}
-
-.menu-toggle:checked + nav .menu-list li a {
-	/* opacity: 1; */
-	/* transform: translateY(0%); */
 }
 
 .openMenu li a {
