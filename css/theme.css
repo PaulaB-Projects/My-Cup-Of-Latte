@@ -4,9 +4,9 @@
 	--text-color:#F9EBD7;
 	--heading-color:#222;
 	--right-section:#C7A267;
-	--col-bg-color: #2D2D3C;
+	--col-bg-color: #69A5A1;
 	--cv-bg-color: #194542;
-	--cv-bg-light:#94B295;
+	--cv-bg-light:#80B7B4;
 	--bg-profile:#D5BA7F;
 
 /* from https://seasons-and-salt.com/  */
@@ -36,6 +36,7 @@ body {
 
 body > header {
 	background-color: var(--col-bg-color);
+	color: var(--cv-bg-color);
 }
 
 body > nav {
@@ -77,12 +78,12 @@ h4,
 h5,
 h6 {
 	font-family: var(--heading-text);
-	color: var(--heading-color);
+	color: var(--cv-bg-color);
 }
 
 .name hgroup h1 {
 	font-size: 5rem;
-	color: var(--col-bg-color);
+	color: var(--cv-bg-color);
 }
 
 .logo {
@@ -106,6 +107,7 @@ h6 {
 .nav-main {
 	font-family: var(--heading-text);
 	font-size: 4rem;
+	color: var(--cv-bg-color);
 }
 
 .menu-list {
@@ -177,7 +179,7 @@ article > header {
 
 .profile,
 .profile h3 {
-	color: var(--col-bg-color);
+	color: var(--cv-bg-color);
 }
 
 
@@ -191,7 +193,7 @@ article > header {
 }
 
 .education :is(h3, h4, h5, h6) {
-	color: var(--col-bg-color);
+	color: var(--cv-bg-color);
 }
 
 .languages,
