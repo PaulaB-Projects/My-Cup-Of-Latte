@@ -188,9 +188,17 @@ body > nav {
 
 .menu:hover::before {
 	content: "menu";
+}
+
+.menu.active:hover::before {
+	content: "close";
+}
+
+.menu:hover::before,
+.menu.active:hover::before {
 	display: inline-block;
 	position: fixed;
-	top: calc(var(--padding) + (var(--logo-size) - var(--menu-size)) / 2);
+	top: calc(var(--padding) + (var(--logo-size) - var(--menu-size)) / 2 + 5px);
 	right: calc(var(--padding) + 8.5%);
 	width: 35px;
 }

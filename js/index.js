@@ -49,16 +49,57 @@ educationPosition();
 
 const checkbox = document.getElementById("menu-toggle");
 const menuList = document.querySelector(".menu-list");
+const menuLabel = document.querySelector(".menu");
+
+let thing = () => { 
+	console.log("Hello"); 
+}
+
+
+function openMenu() {
+	[
+		[
+			menuList,
+			"openMenu",
+			1000
+		],
+		[
+			menuLabel,
+			"active",
+			550
+		]
+	].forEach(([element, className, time]) => {
+		setTimeout(
+			() => {
+				element.classList.add(className)
+			},
+			time
+		);
+	});
+
+	// setTimeout(
+	// 	() => {
+	// 		menuList.classList.add("openMenu");
+	// 	},
+	// 	1000
+	// );
+	// setTimeout(
+	// 	() => {
+	// 		menuLabel.classList.add("active");
+	// 	},
+	// 	500
+	// );
+};
+
+function closeMenu() {
+	menuList.classList.remove("openMenu");
+	menuLabel.classList.remove("active");
+};
 
 checkbox.addEventListener("input", () => {
 	console.log(checkbox.checked);
-	if (checkbox.checked) {
-		///add a class name to the menu list
-		// menuList.classList.add("openAnimation");
-		setTimeout(
-			() => menuList.classList.add("openMenu"),
-			1000
-		);
-	} else
-		menuList.classList.remove("openMenu");
+	if (checkbox.checked)
+		openMenu();
+	else
+		closeMenu();
 });

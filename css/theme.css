@@ -93,14 +93,15 @@ h6 {
 
 .menu {
 	background-color: var(--right-section);
-	transition: 0.7s;
+	transition:
+		background-color 0.7s;
 }
 
 .menu:hover {
 	background-color:var(--active-orange);
 }
 
-.menu-toggle:checked ~ .menu {
+.menu.active {
 	background-color: var(--cv-bg-color);
 }
 
@@ -207,11 +208,16 @@ article > header {
 }
 
 .skills h3,
-.languages h3{
+.languages h3 {
 	color: var(--right-section);
 }
 
-.education :is(h3, h4, h5, h6) {
+.menu:hover::before {
+	color: var(--active-orange);
+}
+
+.education :is(h3, h4, h5, h6),
+.menu.active:hover::before {
 	color: var(--cv-bg-color);
 }
 
