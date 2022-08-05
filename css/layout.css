@@ -102,6 +102,11 @@ body > nav {
 
 }
 
+.noscroll {
+	height: 100vh;
+	overflow: hidden;
+}
+
 .menu-toggle {
 	display: none;
 }
@@ -162,7 +167,8 @@ body > nav {
 
 .menu {
 	/* Universal */
-	display: block;
+	display: flex;
+	align-items: center;
 	margin: 0;
 	width: var(--menu-size);
 	aspect-ratio: 1;
@@ -196,11 +202,10 @@ body > nav {
 
 .menu:hover::before,
 .menu.active:hover::before {
-	display: inline-block;
-	position: fixed;
-	top: calc(var(--padding) + (var(--logo-size) - var(--menu-size)) / 2 + 5px);
-	right: calc(var(--padding) + 8.5%);
-	width: 35px;
+	display: block;
+	position: relative;
+	right: calc(var(--margin) + 5px);
+	top: 
 }
 
 header > section {

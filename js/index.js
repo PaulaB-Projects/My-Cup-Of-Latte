@@ -1,7 +1,11 @@
 const cvButton = document.getElementById("cvButton");
-const languages = document.querySelector(".languages");
-const education = document.querySelector(".education");
-const work = document.querySelector(".work-experience");
+const [
+	profile,
+	work,
+	skills,
+	languages,
+	education
+] = document.querySelectorAll("article > section")
 
 cvButton.addEventListener("click", () => {
 	// SOLUTION 1:
@@ -23,6 +27,24 @@ cvButton.addEventListener("click", () => {
 	location = "#main"; // ./#main
 });
 
+function languagesPosition() {
+	const viewportWidth = window.innerWidth;
+
+	if(viewportWidth < 960)
+		languages.style.marginTop = 0;
+	else {
+		const { bottom } = skills.getBoundingClientRect();
+		const { bottom : bottomProfile } = profile.getBoundingClientRect();
+
+		const b = bottom - bottomProfile;
+		if (b <= 0)
+			languages.style.marginTop = `${b}px`;
+		else {
+			languages.style.marginTop = 0;
+		}
+	}
+}
+
 function educationPosition() {
 	const viewportWidth = window.innerWidth;
 	console.log(viewportWidth);
@@ -38,22 +60,24 @@ function educationPosition() {
 	}
 }
 
-window.addEventListener('resize', () => {
-	educationPosition();
-}, true);
-
 // what about when we haven't resized the window?
-educationPosition();
+
+const calibrate = () => {
+	languagesPosition();
+	educationPosition();
+	window.requestAnimationFrame(calibrate);
+}
+
+calibrate();
+
+
 
 // when menu toggle is clicked ...
 
 const checkbox = document.getElementById("menu-toggle");
 const menuList = document.querySelector(".menu-list");
 const menuLabel = document.querySelector(".menu");
-
-let thing = () => { 
-	console.log("Hello"); 
-}
+const body = document.body;
 
 
 function openMenu() {
@@ -67,8 +91,12 @@ function openMenu() {
 			menuLabel,
 			"active",
 			550
+		],
+		[
+			body,
+			"noscroll"
 		]
-	].forEach(([element, className, time]) => {
+	].forEach(([element, className, time = 0]) => {
 		setTimeout(
 			() => {
 				element.classList.add(className)
@@ -94,6 +122,7 @@ function openMenu() {
 function closeMenu() {
 	menuList.classList.remove("openMenu");
 	menuLabel.classList.remove("active");
+	body.classList.remove("noscroll");
 };
 
 checkbox.addEventListener("input", () => {
