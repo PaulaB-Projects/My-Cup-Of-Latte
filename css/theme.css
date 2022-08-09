@@ -4,9 +4,10 @@
 	--text-color:#F9EBD7;
 	--heading-color:#222;
 	--right-section:#C7A267;
-	--active-orange:#F3B945;
+	--orange:#F3B945;
+	--active-orange:#eda619;
 	--col-bg-color: #69A5A1;
-	--cv-bg-color: #194542;
+	--dark-green: #194542;
 	--cv-bg-light:#80B7B4;
 	--bg-profile:#D5BA7F;
 
@@ -41,7 +42,7 @@ body > header {
 }
 
 body > nav {
-	background-color: var(--bg-profile);
+	background-color: var(--orange);
 	visibility: hidden;
 	opacity: 0;
 	transform: translateY(100vh);
@@ -79,12 +80,12 @@ h4,
 h5,
 h6 {
 	font-family: var(--heading-text);
-	color: var(--cv-bg-color);
+	color: var(--dark-green);
 }
 
 .name hgroup h1 {
 	font-size: 5rem;
-	color: var(--cv-bg-color);
+	color: var(--dark-green);
 }
 
 .logo {
@@ -92,7 +93,7 @@ h6 {
 }
 
 .menu {
-	background-color: var(--right-section);
+	background-color: var(--orange);
 	transition:
 		background-color 0.7s;
 }
@@ -102,7 +103,11 @@ h6 {
 }
 
 .menu.active {
-	background-color: var(--cv-bg-color);
+	background-color: var(--dark-green);
+}
+
+.menu.active:hover {
+	background-color: #69A5A1;
 }
 
 .menu-text {
@@ -131,7 +136,7 @@ h6 {
 	--delay: 0s;
 	--duration: 750ms;
 	--timing: cubic-bezier(0.475, 0.140, 0.660, 1.430);
-	color:var(--cv-bg-color);
+	color:var(--dark-green);
 	display: block;
 	opacity: 0;
 	transition: 
@@ -171,16 +176,11 @@ h6 {
 	opacity: 1;	
 }
 
-
-.header-img { 
-	background-color: rgb(13, 99, 65);
-}
-
 #cvButton {
 	font-family: var(--body-text);
 	font-size: 1.5rem;
-	background-color: var(--right-section);
-	color: var(--cv-bg-color);
+	background-color: var(--orange);
+	color: var(--dark-green);
 	border: none;
 	transition: 0.5s;
 }
@@ -199,7 +199,7 @@ article > header {
 
 .profile,
 .profile h3 {
-	color: var(--cv-bg-color);
+	color: var(--dark-green);
 }
 
 
@@ -209,7 +209,7 @@ article > header {
 
 .skills h3,
 .languages h3 {
-	color: var(--right-section);
+	color: var(--active-orange);;
 }
 
 .menu:hover::before {
@@ -223,16 +223,16 @@ article > header {
 
 .languages,
 .skills {
-	background-color: var(--cv-bg-color);
+	background-color: var(--dark-green);
 	color: var(--bg-color);
 }
 
 .education {
-	background-color: var(--right-section);
+	background-color: var(--active-orange);;
 }
 
 .roles {
-	color: var(--cv-bg-color);
+	color: var(--dark-green);
 }
 
 section h3::after {

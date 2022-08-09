@@ -65,7 +65,7 @@ article > header hgroup {
 .name .photo {
 	order:2;
 	width: 40%;
-	background-color: var(--cv-bg-color);
+	background-color: var(--dark-green);
 }
 
 .right section,

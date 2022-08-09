@@ -27,58 +27,19 @@ cvButton.addEventListener("click", () => {
 	location = "#main"; // ./#main
 });
 
-/* --- Getting the position adjusted for languages and education
-function languagesPosition() {
-	const viewportWidth = window.innerWidth;
+function adjustPosition(element, ...others) {
+	if (window.innerWidth >= 960) {
+		// above.getBoundingClientRect().bottom - beside.getBoundingClientRect().bottom
+		const distance =
+			others
+				.map(element => element.getBoundingClientRect().bottom)
+				.reduce((a, b) => a - b);
 
-	if(viewportWidth < 960)
-		languages.style.marginTop = 0;
-	else {
-		const { bottom } = skills.getBoundingClientRect();
-		const { bottom : bottomProfile } = profile.getBoundingClientRect();
-
-		const b = bottom - bottomProfile;
-		if (b <= 0)
-			languages.style.marginTop = `${b}px`;
-		else {
-			languages.style.marginTop = 0;
-		}
+		if (distance <= 0)
+			return element.style.marginTop = `${distance}px`;
 	}
+	element.style.marginTop = 0;
 }
-
-function educationPosition() {
-	const viewportWidth = window.innerWidth;
-	console.log(viewportWidth);
-
-	if (viewportWidth < 960)
-		education.style.marginTop = 0;
-	else {
-		const { bottom } = languages.getBoundingClientRect();
-		const { bottom : bottomWork } = work.getBoundingClientRect();
-
-		const a = bottom - bottomWork;
-		education.style.marginTop = `${a}px`;
-	}
-}
-*/
-/***Adjusting the position (marginTop) of an HTML element***/
-function adjustPosition(element, above, beside) {
-	const viewportWidth = window.innerWidth;
-	if (viewportWidth < 960)
-		element.style.marginTop = 0;
-	else {
-		const { bottom } = above.getBoundingClientRect();
-		const { bottom : bottomProfile } = beside.getBoundingClientRect();
-
-		const b = bottom - bottomProfile;
-		if (b <= 0)
-			element.style.marginTop = `${b}px`;
-		else {
-			element.style.marginTop = 0;
-		}
-	}
-}
-// what about when we haven't resized the window?
 
 const calibrate = () => {
 	[
@@ -92,23 +53,7 @@ const calibrate = () => {
 			languages,
 			work
 		]
-	].forEach(([element, above, beside]) => {		
-			const viewportWidth = window.innerWidth;
-			if (viewportWidth < 960)
-				element.style.marginTop = 0;
-			else {
-				const { bottom } = above.getBoundingClientRect();
-				const { bottom : bottomProfile } = beside.getBoundingClientRect();
-		
-				const b = bottom - bottomProfile;
-				if (b <= 0)
-					element.style.marginTop = `${b}px`;
-				else {
-					element.style.marginTop = 0;
-				}
-			}
-		}
-	)
+	].forEach(elements => adjustPosition(...elements));
 	window.requestAnimationFrame(calibrate);
 }
 
@@ -120,6 +65,15 @@ const checkbox = document.getElementById("menu-toggle");
 const menuList = document.querySelector(".menu-list");
 const menuLabel = document.querySelector(".menu");
 const body = document.body;
+
+function delayAddClassName(element, className, delayTime = 0) {
+	setTimeout(
+		() => {
+			element.classList.add(className)
+		},
+		delayTime
+	);
+}
 
 function openMenu() {
 	[
@@ -137,27 +91,7 @@ function openMenu() {
 			body,
 			"noscroll"
 		]
-	].forEach(([element, className, time = 0]) => {
-		setTimeout(
-			() => {
-				element.classList.add(className)
-			},
-			time
-		);
-	});
-
-	// setTimeout(
-	// 	() => {
-	// 		menuList.classList.add("openMenu");
-	// 	},
-	// 	1000
-	// );
-	// setTimeout(
-	// 	() => {
-	// 		menuLabel.classList.add("active");
-	// 	},
-	// 	500
-	// );
+	].forEach(args => delayAddClassName(...args));
 };
 
 function closeMenu() {
