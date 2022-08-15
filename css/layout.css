@@ -201,7 +201,7 @@ body > nav {
 	display: block;
 	position: relative;
 	right: calc(var(--margin) + 5px);
-	top: 
+	top: var(--padding)
 }
 
 header > section {
@@ -223,6 +223,7 @@ header > section {
 	z-index: 2;
 	width: var(--diameter);
 	aspect-ratio: 1;
+	transform: scale(2.5);
 }
 
 .header-img .person {
@@ -237,6 +238,54 @@ header > section {
 	z-index: 9;
 }
 
+.header-img .leaf-01 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8;
+}
+
+.header-img .leaf-02 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8;
+}
+
+.header-img .leaf-03 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8;
+}
+
+.header-img .leaf-04 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8;
+}
+
+.header-img .leaf-05 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8;
+}
+
+.header-img .leaf-06 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8;
+}
+
+.header-img .leaf-07 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8;
+}
 
 #cvButton {
 	margin: var(--margin);

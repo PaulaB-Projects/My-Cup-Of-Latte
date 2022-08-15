@@ -91,7 +91,7 @@ function openMenu() {
 			body,
 			"noscroll"
 		]
-	].forEach(args => delayAddClassName(...args));
+	].forEach(args => delayAddClassName(...arguments));
 };
 
 function closeMenu() {
