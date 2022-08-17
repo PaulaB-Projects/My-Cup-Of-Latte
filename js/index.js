@@ -75,7 +75,7 @@ function delayAddClassName(element, className, delayTime = 0) {
 	);
 }
 
-function openMenu() {
+const openMenu = () => {
 	[
 		[
 			menuList,
@@ -91,7 +91,7 @@ function openMenu() {
 			body,
 			"noscroll"
 		]
-	].forEach(args => delayAddClassName(...arguments));
+	].forEach(args => delayAddClassName(...args));
 };
 
 function closeMenu() {
