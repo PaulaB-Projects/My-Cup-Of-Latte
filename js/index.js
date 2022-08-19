@@ -64,6 +64,7 @@ calibrate();
 const checkbox = document.getElementById("menu-toggle");
 const menuList = document.querySelector(".menu-list");
 const menuLabel = document.querySelector(".menu");
+const leaf = document.querySelector("leaf-08");
 const body = document.body;
 
 function delayAddClassName(element, className, delayTime = 0) {
@@ -107,3 +108,7 @@ checkbox.addEventListener("input", () => {
 	else
 		closeMenu();
 });
+
+// when the page loads, animation for the image elements 
+
+window.onload.leaf.classList.add("moveLeaf");

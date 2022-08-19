@@ -11,6 +11,8 @@
 	--cv-bg-light:#80B7B4;
 	--bg-profile:#D5BA7F;
 
+	--initial: -250px;
+	--final: -50px;
 /* from https://seasons-and-salt.com/  */
 	--main-bg-brown: #90482F;
 	--main-light01: #C7A267;
@@ -122,6 +124,10 @@ h6 {
 	color: var(--cv-bg-color);
 }
 
+.menu:hover::before {
+	color: var(--active-orange);
+}
+
 .menu-list {
 	text-transform: uppercase;
 	line-height: 1.1;
@@ -189,6 +195,82 @@ h6 {
 	background-color: var(--active-orange);
 }
 
+/* header main image animation */
+
+@keyframes slide {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(var(--initial), var(--final));
+	}
+}
+
+/* @keyframes slideLeft2 {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(-270px, 30px);
+	}
+}
+
+@keyframes slideRight {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(330px, -120px);
+	}
+} */
+
+.leaf-08 {
+	--initial: 330px;
+	--final: -120px;
+	animation: 3s ease-out 1s 1 slide;
+	transform: 
+		translate(var(--initial), var(--final));
+}
+
+.leaf-02 {
+	--initial: 310px;
+	--final: -150px;
+	animation: 3s ease-out 1s 1 slide;
+	transform: 
+		translate(var(--initial), var(--final));
+}
+
+.plane {
+	--initial: -320px;
+	--final: -70px;
+	animation: 6s ease-out 1s 1 slide;
+	transform: 
+		translate(var(--initial), var(--final));
+}
+.leaf-04 {
+	--initial: -250px;
+	--final: -50px;
+	animation: 4s ease-out 1s 1 slide;
+	transform: 
+		translate(var(--initial), var(--final));
+}
+
+.leaf-01 {
+	--initial: -270px;
+	--final: 30px;
+	animation: 3s ease-out 1s 1 slide;
+	transform: translate(var(--initial), var(--final));
+}
+
+.leaf-03 {
+	--initial: -170px;
+	--final: -40px;
+	animation: 3s ease-out 1s 1 slide;
+	transform: translate(var(--initial), var(--final));
+}
+
+
+
 article > header {
 	background-color: var(--bg-color);
 }
@@ -212,13 +294,9 @@ article > header {
 	color: var(--active-orange);;
 }
 
-.menu:hover::before {
-	color: var(--active-orange);
-}
-
 .education :is(h3, h4, h5, h6),
 .menu.active:hover::before {
-	color: var(--cv-bg-color);
+	color: var(--dark-green);
 }
 
 .languages,
