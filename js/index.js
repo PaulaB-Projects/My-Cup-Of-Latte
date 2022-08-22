@@ -111,4 +111,6 @@ checkbox.addEventListener("input", () => {
 
 // when the page loads, animation for the image elements 
 
-window.onload.leaf.classList.add("moveLeaf");
+window.addEventListener('load', function() {
+
+});
