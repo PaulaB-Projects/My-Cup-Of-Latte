@@ -1,3 +1,13 @@
+const DISPLAY_MENU_DELAY = 1000;
+const DISPLAY_MENU_LABEL_DELAY = 550;
+const DISPLAY_HEADER_DELAY = 1500;
+
+const checkbox = document.getElementById("menu-toggle");
+const menuList = document.querySelector(".menu-list");
+const menuLabel = document.querySelector(".menu");
+const headerImg = document.querySelector(".header-img");
+
+
 const cvButton = document.getElementById("cvButton");
 const [
 	profile,
@@ -61,12 +71,6 @@ calibrate();
 
 // when menu toggle is clicked ...
 
-const checkbox = document.getElementById("menu-toggle");
-const menuList = document.querySelector(".menu-list");
-const menuLabel = document.querySelector(".menu");
-const leaf = document.querySelector("leaf-08");
-const body = document.body;
-
 function delayAddClassName(element, className, delayTime = 0) {
 	setTimeout(
 		() => {
@@ -81,15 +85,15 @@ const openMenu = () => {
 		[
 			menuList,
 			"openMenu",
-			1000
+			DISPLAY_MENU_DELAY
 		],
 		[
 			menuLabel,
 			"active",
-			550
+			DISPLAY_MENU_LABEL_DELAY
 		],
 		[
-			body,
+			document.body,
 			"noscroll"
 		]
 	].forEach(args => delayAddClassName(...args));
@@ -98,7 +102,7 @@ const openMenu = () => {
 function closeMenu() {
 	menuList.classList.remove("openMenu");
 	menuLabel.classList.remove("active");
-	body.classList.remove("noscroll");
+	document.body.classList.remove("noscroll");
 };
 
 checkbox.addEventListener("input", () => {
@@ -110,7 +114,10 @@ checkbox.addEventListener("input", () => {
 });
 
 // when the page loads, animation for the image elements 
+//1. add a class name to some some element after some time
+delayAddClassName(
+	headerImg,
+	"endposition",
+	DISPLAY_HEADER_DELAY
+);
 
-window.addEventListener('load', function() {
-
-});

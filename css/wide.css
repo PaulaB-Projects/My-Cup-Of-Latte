@@ -139,4 +139,13 @@ article > header hgroup {
 	font-size: 5rem;
 }
 
-
+.header-img .leaf-08,
+.header-img .leaf-07,
+.header-img .leaf-06,
+.header-img .leaf-05,
+.header-img .leaf-04,
+.header-img .leaf-03,
+.header-img .leaf-02,
+.header-img .leaf-01 { 
+	max-height: 9%;
+}
