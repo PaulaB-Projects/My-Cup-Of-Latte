@@ -294,7 +294,7 @@ header > section {
 
 	top: -40%;
 	left: 80%;
-	z-index: 9;
+	z-index: 8;
 }
 
 .header-img .leaf-01,
@@ -306,7 +306,8 @@ header > section {
 .header-img .leaf-07,
 .header-img .leaf-08 {
 	min-height: 5%;
-	max-height: 8%;
+	max-height: 7%;
+	opacity: 1;
 }
 
 .header-img .leaf-01 {

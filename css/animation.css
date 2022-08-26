@@ -1,40 +1,77 @@
 /* header main image animation */
+@keyframes fly {
+	0% {
+		top: -40%;
+		left: 80%;
+	}
+	50% {
+		transform: 
+		rotateX(50deg);
+	}
+	100% {
+		width: 25%;
+		top: -5%;
+		left: -44%;
+		transform: 
+			rotate(-10deg);
+	}
+}
 
+.plane {
+	transition: none !important;
+	translate: transform 9s;
+}
 
+.header-img.endposition .plane {
+	animation: fly 8s forwards;
+}
 
+.header-img img {
+	--duration: 5s;
+
+	transition:
+		top var(--duration),
+		left var(--duration);
+}
 
 .header-img.endposition .leaf-08 {
 	top: 37%;
 	left: 112%;
+	
 }
 
 .header-img.endposition .leaf-07 {
+	--duration: 5s;
 	top: 112%;
 	left: -64%;
 }
 
 .header-img.endposition .leaf-06 {
-	top: 61%;
-	left: -20%;
+	top: 53%;
+	left: -37%;
 }
 
 .header-img.endposition .leaf-05 {
-	top: 9%;
-	left: -44%;
+	--duration: 8s;
+	top: 14%;
+	left: -55%;
 }
 
 .header-img.endposition .leaf-04 {
-	top: 65%;
-	left: -59%;
+	--duration: 8s;
+	top: 55%;
+	left: -109%;
 }
 
 .header-img.endposition .leaf-03 {
+	--duration: 5s;
 	top: 92%;
 	left: -17%;
 
 }
 
 .header-img.endposition .leaf-02 {
+	--duration: 7s;
 	top: 108%;
 	left: 104%;
 }
@@ -44,27 +81,6 @@
 	left: 15%;
 }
 
-@keyframes fly {
-	0% {
-
-	}
-	25% {
-
-	}
-	50% {
-
-	}
-	75% {
-
-	}
-	100% {
-
-	}	
-}
-
-.plane {
-
-}
 
 .shoes {
 	/* --initial: 58px;

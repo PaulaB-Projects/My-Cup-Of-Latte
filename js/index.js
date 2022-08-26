@@ -1,6 +1,6 @@
 const DISPLAY_MENU_DELAY = 1000;
 const DISPLAY_MENU_LABEL_DELAY = 550;
-const DISPLAY_HEADER_DELAY = 1500;
+const DISPLAY_HEADER_DELAY = 500;
 
 const checkbox = document.getElementById("menu-toggle");
 const menuList = document.querySelector(".menu-list");
