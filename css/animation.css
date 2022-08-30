@@ -4,17 +4,48 @@
 		top: -40%;
 		left: 80%;
 	}
-	50% {
-		transform: 
-		rotateX(50deg);
+	40% {
+		transform: rotateY(0deg);
 	}
-	100% {
+	50% {
 		width: 25%;
 		top: -5%;
 		left: -44%;
-		transform: 
-			rotate(-10deg);
+		transform: rotateY(90deg);
 	}
+	60% {
+		transform: rotateY(180deg);
+	}
+
+	100% {
+		width: 15%;
+		top: -10%;
+		left: 60%;
+		transform: rotateY(150deg) rotateZ(10deg);
+	}
+}
+
+@keyframes breath {
+	0% {
+		transform: rotateZ(7deg);
+	}
+	50% {
+		transform: rotateZ(0deg);
+	}
+	100%{
+		transform: rotateZ(7deg);
+	}
+}
+
+.header-img.endposition .italy,
+.header-img.endposition .romania {
+	animation: breath 5s forwards infinite;
+}
+
+.header-img.endposition .surf-board,
+.header-img.endposition .shoes {
+	animation: breath 5s forwards infinite;
+	animation-delay: 2.5s;
 }
 
 .plane {
@@ -22,13 +53,14 @@
 	translate: transform 9s;
 }
 
+
 .header-img.endposition .plane {
-	animation: fly 8s forwards;
+	animation: fly 8s forwards linear;
 }
 
 .header-img img {
 	--duration: 5s;
-
+	transition: transform 3s;
 	transition:
 		top var(--duration),
 		left var(--duration);
@@ -37,7 +69,6 @@
 .header-img.endposition .leaf-08 {
 	top: 37%;
 	left: 112%;
-	
 }
 
 .header-img.endposition .leaf-07 {
@@ -81,13 +112,3 @@
 	left: 15%;
 }
 
-
-.shoes {
-	/* --initial: 58px;
-	--final: 68px; */
-
-}
-
-.italy {
-
-}

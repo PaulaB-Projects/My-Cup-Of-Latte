@@ -282,8 +282,8 @@ header > section {
 .header-img .shoes {
 	width: 40%;
 
-	top: 68%;
-	left: 68%;
+	top: 50%;
+	left: 76%;
 	transform: rotate(38deg);
 
 	z-index: 8;
@@ -305,8 +305,7 @@ header > section {
 .header-img .leaf-06,
 .header-img .leaf-07,
 .header-img .leaf-08 {
-	min-height: 5%;
-	max-height: 7%;
+	width: 8%;
 	opacity: 1;
 }
 
