@@ -156,7 +156,7 @@ body > nav {
 	padding: 0;
 }
 
-.logo {
+.logo svg {
 	width: var(--logo-size);
 	aspect-ratio: 1;
 	border-radius: 50%;
@@ -215,7 +215,7 @@ header > section {
 
 .intro {
 	position: relative;
-	width: clamp(250px, 40%, 500px);
+	width: clamp(380px, 40%, 500px);
 	z-index: 1;
 }
 
@@ -427,9 +427,14 @@ article > header h2 {
 }
 
 .photo figure img {
-	width: auto;
-	height: 400px;
+	height: 100%;
+	width: 100%;
+	object-fit: cover
 }
+
+.photo figure img:hover {
+	transform: scaleX(-1);
+ }
 
 .work-experience h4,
 .work-experience h5,

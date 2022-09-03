@@ -54,6 +54,27 @@ body > nav {
 		transform 1s;
 }
 
+svg {
+	background-color: #f9ebd7;
+}
+.wheels {
+	fill: #faebd7;
+	stroke: #000;
+	stroke-width: 9px;
+}
+.structure {
+	stroke-width: 11px;
+}
+.main-circle {
+	fill: url(#gradient);
+}
+.light {
+	stop-color: #cae8cb;
+}
+.dark {
+	stop-color: #1c501d;
+}
+
 .menu-toggle:checked + nav {
 	visibility: visible;
 	opacity: 1;
@@ -90,8 +111,8 @@ h6 {
 	color: var(--dark-green);
 }
 
-.logo {
-	background-color: grey;
+.intro h2 {
+	font-size: 4rem;
 }
 
 .menu {

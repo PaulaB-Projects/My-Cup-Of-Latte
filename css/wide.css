@@ -80,13 +80,13 @@ article > header hgroup {
 }
 
 .name .photo figure {
-	margin: 0;
 	width: 100%;
 }
 
 .name figure img {
-	height: auto;
-	width: 150%;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
 }
 
 .name hgroup {

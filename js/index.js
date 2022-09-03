@@ -22,8 +22,7 @@ cvButton.addEventListener("click", () => {
 	// const pageHeader = document.querySelector("header");
 	// const headerHeight = pageHeader.offsetHeight;
 	// window.scrollTo({
-	// 	top: headerHeight,
-	// 	behavior: 'smooth'
+	// 	top: headerHeight
 	// });
 
 	// SOLUTION 2:
@@ -33,7 +32,6 @@ cvButton.addEventListener("click", () => {
 
 	// SOLUTION 3:
 	// scroll to #main
-	
 	location = "#main"; // ./#main
 });
 
