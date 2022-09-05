@@ -483,3 +483,10 @@ article > header h2 {
 	width: 100%;
 }
 
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 20px;
+}

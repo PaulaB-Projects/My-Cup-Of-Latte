@@ -8,12 +8,14 @@
 	--active-orange:#eda619;
 	--col-bg-color: #69A5A1;
 	--dark-green: #194542;
-	--cv-bg-light:#80B7B4;
+	--light-green:#cae8cb;
+	--cv-bg-light:#cae8cb;
 	--bg-profile:#D5BA7F;
 
 	--initial: -250px;
 	--final: -50px;
-/* from https://seasons-and-salt.com/  */
+
+/* Option 2 colors from https://seasons-and-salt.com/  */
 	--main-bg-brown: #90482F;
 	--main-light01: #C7A267;
 	--main-light02:#FDFEF6;
@@ -39,8 +41,8 @@ body {
 }
 
 body > header {
-	background-color: var(--col-bg-color);
-	color: var(--cv-bg-color);
+	background-color: var(--light-green);
+	color: var(--active-orange);
 }
 
 body > nav {
@@ -264,4 +266,13 @@ section h3::after {
 	display: block;
 	width: 25px;
 	border-bottom: 2px solid;
+}
+
+footer {
+	background-color: var(--light-green);
+}
+footer a {
+	text-decoration: none;
+	font-style: inherit;
+	color: var(--dark-green);
 }
