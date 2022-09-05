@@ -2,6 +2,29 @@ body {
 	/* background:hotpink !important; */
 }
 
+header > section {
+	position: relative;
+}
+
+.intro {
+	/* position: absolute; */
+	width: clamp(650px, 40%, 800px);
+	z-index: 1;
+}
+
+.header-img {
+	position: absolute;
+	right: -580px;
+	top: 250px;
+
+	max-width: 500px;
+
+	/* margin: auto; */
+	flex-grow: 1;
+	z-index: 2;
+	aspect-ratio: 1;
+}
+
 article > header {
 	padding: 0;
 }

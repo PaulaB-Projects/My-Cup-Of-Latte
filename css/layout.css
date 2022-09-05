@@ -207,6 +207,7 @@ body > nav {
 
 header > section {
 	display: flex;
+
 	justify-content: space-between;
 	align-items: center;
 	/* position: relative; */
@@ -225,14 +226,11 @@ header > section {
 	top: 0;
 
 	max-width: 500px;
-	/* height: var(--diameter); */
 
 	margin: 0 auto;
-
 	flex-grow: 1;
 	z-index: 2;
 	aspect-ratio: 1;
-	/* transform: scale(0.5); */
 }
 
 .header-img > img {
