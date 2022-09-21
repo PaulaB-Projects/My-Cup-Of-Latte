@@ -113,6 +113,8 @@ body > nav {
 }
 
 .nav-main {
+	font-size : 4rem;
+
 	position: relative;
 	flex-grow: 1;
 	display: flex;
@@ -206,29 +208,33 @@ body > nav {
 }
 
 header > section {
-	display: flex;
+	/* display: flex;
 
 	justify-content: space-between;
-	align-items: center;
+	align-items: center; */
 	/* position: relative; */
 	flex-grow: 1;
 }
 
 .intro {
 	position: relative;
-	width: clamp(380px, 40%, 500px);
+	max-width: 690px;
+	/* width: clamp(380px, 40%, 500px); */
 	z-index: 1;
+}
+
+.intro h2 {
+	font-size: clamp(2rem, 7vw, 5rem);
 }
 
 .header-img {
 	position: relative;
-	left: 0;
-	top: 0;
 
-	max-width: 500px;
+	max-width: 450px;
 
-	margin: 0 auto;
-	flex-grow: 1;
+	margin: var(--padding) auto 0;
+
+	/* flex-grow: 1; */
 	z-index: 2;
 	aspect-ratio: 1;
 }
@@ -357,6 +363,8 @@ header > section {
 }
 
 #cvButton {
+	font-size: 1.5rem;
+
 	margin: var(--margin);
 	width: 250px;
 	height: 85px;
@@ -405,6 +413,10 @@ article .education {
 main article.wrapper{
 	padding-top: 0;
 	padding-bottom: 0;
+}
+
+.name hgroup h1 {
+	font-size: 5rem;
 }
 
 .name hgroup h2 {
