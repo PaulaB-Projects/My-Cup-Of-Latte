@@ -76,6 +76,7 @@ article .languages {
 article .education {
 	order: 6;
 	width: 40%;
+	align-self: stretch;
 }
 
 article > header hgroup {
