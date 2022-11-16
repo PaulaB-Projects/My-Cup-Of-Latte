@@ -1,0 +1,23 @@
+{
+  "name": "my-cup-of-latte",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Graham-and-Paula/My-Cup-Of-Latte.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Graham-and-Paula/My-Cup-Of-Latte/issues"
+  },
+  "homepage": "https://github.com/Graham-and-Paula/My-Cup-Of-Latte#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
